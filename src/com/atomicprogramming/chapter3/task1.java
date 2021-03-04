@@ -1,6 +1,7 @@
 package com.atomicprogramming.chapter3;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class task1 {
@@ -20,7 +21,7 @@ public class task1 {
         }
     }
     public static void main(String[] args) {
-        ArrayList<String> quotations = new ArrayList<>();
+        List<String> quotations = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
         String quote;
         boolean another;
@@ -30,9 +31,12 @@ public class task1 {
             quotations.add(quote);
             another = another();
         } while (another);
-        String quotes = "Your favourite quotations are:\n";
+        StringBuilder quotes = new StringBuilder();
+        quotes.append("Your favourite quotes are:\n");
+        int index = 1;
         for (String quotation : quotations) {
-            quotes += quotation + "\n";
+            quotes.append(index).append(") ").append(quotation).append("\n");
+            index++;
         }
         System.out.println(quotes);
     }
