@@ -12,8 +12,10 @@ public class task1 {
             System.out.println("Do you have another favourite quotation? (y/n)");
             reply = scanner.nextLine();
             if (reply.equals("y")) {
+                scanner.close();
                 return true;
             } else if (reply.equals("n")) {
+                scanner.close();
                 return false;
             } else {
                 System.out.println("Invalid response!");
@@ -38,6 +40,7 @@ public class task1 {
             quotes.append(index).append(") ").append(quotation).append("\n");
             index++;
         }
+        scanner.close();
         System.out.println(quotes);
     }
 }
