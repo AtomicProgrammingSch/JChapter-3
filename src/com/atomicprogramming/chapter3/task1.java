@@ -32,7 +32,6 @@ public class task1 {
         } while (another);
         String quotes = "Your favourite quotations are:\n";
         for (String quotation : quotations) {
-            assert false;
             quotes += quotation + "\n";
         }
         System.out.println(quotes);
